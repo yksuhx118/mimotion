@@ -23,6 +23,7 @@ jobs:
         env:
          PARAMETER: ${{ secrets.PARAMETER }}
         run: |
+          sleep $(shuf -i 5-10 -n1)
           bash mimotion.sh $PARAMETER
 
       - name: delete workflow runs
