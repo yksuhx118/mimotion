@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin && export PATH
-## 小米运动修改微信支付宝运动步数:我的->第三方接入->绑定支付宝,微信
+### 小米运动修改微信支付宝运动步数:我的->第三方接入->绑定支付宝,微信
 
 # tempfile & rm it when exit
 trap 'rm -f "$TMPFILE"' EXIT; TMPFILE=$(mktemp) || exit 1

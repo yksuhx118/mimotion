@@ -9,4 +9,5 @@
 | `others` | 其它说明查看脚本内容 |
 
 #### thanks:  
+* jd_docker
 * [mimotion](https://github.com/Squaregentleman/mimotion)
