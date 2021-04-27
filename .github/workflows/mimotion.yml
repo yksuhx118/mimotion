@@ -2,7 +2,7 @@ name: mimotion
 
 on:
   schedule:
-    - cron: "35 10 * * *"
+    - cron: "0 23 * * *"
   push:
     branches:
       - main
