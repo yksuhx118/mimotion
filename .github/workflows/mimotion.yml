@@ -8,10 +8,13 @@ on:
       - main
     paths:
       - "mimotion.sh"
+    watch:
+      types: started
 
 jobs:
   update:
     runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
     steps:
       - name: Checkout codebase
         uses: actions/checkout@v2
