@@ -18,7 +18,7 @@ jobs:
         
       - name: mimotion
         env:
-        PARAMETER: ${{ secrets.PARAMETER }}
+         PARAMETER: ${{ secrets.PARAMETER }}
         run: |
           bash mimotion.sh $PARAMETER
 
