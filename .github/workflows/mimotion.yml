@@ -1,0 +1,31 @@
+name: mimotion
+
+on:
+  schedule:
+    - cron: "35 10 * * *"
+  push:
+    branches:
+      - main
+    paths:
+      - "mimotion.sh"
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout codebase
+        uses: actions/checkout@v2
+        
+      - name: mimotion
+        env:
+        PARAMETER: ${{ secrets.PARAMETER }}
+        run: |
+          bash mimotion.sh $PARAMETER
+
+      - name: delete workflow runs
+        uses: Mattraks/delete-workflow-runs@main
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          repository: ${{ github.repository }}
+          retain_days: 1
+          keep_minimum_runs: 0
